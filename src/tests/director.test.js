@@ -5,11 +5,11 @@ let directorId;
 
 test("POST /directors should create a director ", async () => {
   const director = {
-    firstName: "ger",
-    lastName: "ortiz",
+    firstName: "Gerson",
+    lastName: "Ortiz",
     nationality: "colombiano",
     image: "https://image.jpg",
-    birthday: "1998-27-05",
+    birthday: "1998-05-27",
   };
 
   const res = await request(app).post("/directors").send(director);
@@ -30,14 +30,14 @@ test("PUT /directors should update a director", async () => {
     lastName: "Ortiz",
     nationality: "colombiano",
     image: "https://image.jpg",
-    birthday: "1998-27-05",
+    birthday: "1998-05-27",
   };
 
   const res = await request(app)
     .put(`/directors/${directorId}`)
     .send(updatedDirector);
-  expect(res.status).toBe(200);
-  expect(res.body.name).toBe(updatedDirector.name);
+    expect(res.status).toBe(200);
+    expect(res.body.name).toBe(updatedDirector.name);
 });
 
 test("DELETE /directors should delete a director", async () => {

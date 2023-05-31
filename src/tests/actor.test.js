@@ -9,7 +9,7 @@ test("POST /actors should create an actor", async () => {
     lastName: "Ortiz",
     nationality: "Colombiano",
     image: "https://image.jpg",
-    birthday: "1998-27-05",
+    birthday: "1998-05-27",
   };
 
   const res = await request(app).post("/actors").send(actor);
@@ -26,11 +26,11 @@ test("GET /actors should return all the actors", async () => {
 
 test("PUT /actors should update an actor", async () => {
   const updatedActor = {
-    firstName: "Joseth",
-    lastName: "Ortiz",
+    firstName: "Giovanny",
+    lastName: "Rivera",
     nationality: "Colombiano",
     image: "https://image.jpg",
-    birthday: "1999-06-05",
+    birthday: "1998-05-27",
   };
 
   const res = await request(app).put(`/actors/${actorId}`).send(updatedActor);

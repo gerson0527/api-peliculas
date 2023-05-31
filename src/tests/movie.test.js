@@ -9,10 +9,10 @@ let movieId;
 
 test("POST /movies should create a movie ", async () => {
   const movie = {
-    name: "2012",
+    name: "Smile",
     image: "https://image.jpg",
-    synopsis: "pelicula que se trata de final del mundo",
-    releaseYear: 2009,
+    synopsis: "an horror movie that's really scary",
+    releaseYear: 2022,
   };
   const res = await request(app).post("/movies").send(movie);
   movieId = res.body.id;
@@ -31,9 +31,9 @@ test("GET /movies should bring all the movies", async () => {
 
 test("PUT /movies should update a movie", async () => {
   const updatedmovie = {
-    name: "no mires arriba",
+    name: "Valak",
     image: "https://image.jpg",
-    synopsis: "pelicula que trata de cae un metiorito en la tierra",
+    synopsis: "an horror movie that's really scary",
     releaseYear: 2022,
   };
 
@@ -54,9 +54,9 @@ test("POST /movies/:id/genres should set a genre to a movie", async () => {
 
 test("POST /movies/:id/actors should set an actor to a movie", async () => {
   const actor = await Actor.create({
-    firstName: "fernando",
-    lastName: "Oritz",
-    nationality: "colombiano",
+    firstName: "Legend",
+    lastName: "Elisca",
+    nationality: "Haitian",
     image: "https://image.jpg",
     birthday: "2001-05-07",
   });
@@ -69,9 +69,9 @@ test("POST /movies/:id/actors should set an actor to a movie", async () => {
 
 test("POST /movies/:id/directors should set a director to a movie", async () => {
   const director = await Director.create({
-    firstName: "camilo",
-    lastName: "next",
-    nationality: "colombiana",
+    firstName: "Jhon",
+    lastName: "Doe",
+    nationality: "Haitian",
     image: "https://image.jpg",
     birthday: "2002-04-08",
   });
